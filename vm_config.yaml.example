@@ -1,0 +1,21 @@
+box: "ubuntu/jammy64"
+memory: 3072
+cpus: 2
+bridge_interface: "your interface"
+
+login: "test"
+password: "openssl passwd -6 -salt salt1234"
+public_key: ssh-rsa AAAA
+
+vms:
+  - name: "test-server-1"
+    hostname: "test-1"
+    ip: "192.168.0.2"
+
+  - name: "twst-server-2"
+    hostname: "test-2" 
+    ip: "192.168.0.3"
+
+  - name: "test-server-3"
+    hostname: "test-3"
+    ip: "192.168.0.4"
