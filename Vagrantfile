@@ -19,6 +19,8 @@ Vagrant.configure("2") do |config|
         vb.cpus = config_data['cpus']
         vb.memory = config_data['memory']
       end
+
+      host.vm.network "public_network", bridge: config_data['bridge_interface'], ip: vm['ip']  
       
       host.vm.provision "shell", inline: <<-SHELL
 
